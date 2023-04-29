@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Development</title>
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/course.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div>
+                <h2 class="logo"><a class="text-white" href="index.htm">Spark</a></h2>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="index.htm">Home</a></li>
+                    <li><a href="guide.htm">Guides</a></li>
+                    <li><a href="video.htm">Videos</a></li>
+                    <li><a href="event.htm">Events</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 id="frontend" align="center">FrontEnd Development</h1>
+        <p align="center">Step by step guide to becoming a modern frontend developer in 2023</p>
+        <div id="dropdowns-container"></div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-md-4">
+                    <h4 class="logo">Spark</h4>
+                    <p class="footer-text">Community created roadmaps, articles, resources and journeys to help you choose your path and grow in your career.</p>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h4>Map</h4>
+                    <ul>
+                        <li><a href="index.htm">Home</a></li>
+                        <li><a href="guide.htm">Guides</a></li>
+                        <li><a href="video.htm">Videos</a></li>
+                        <li><a href="event.htm">Events</a></li>
+                    </ul>
+                </div>
+                <p class="text-center copyright">&copy; 2023 Spark. All rights are reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!-- fontawesome's js -->
+    <script src="https://kit.fontawesome.com/4c296c037c.js" crossorigin="anonymous"></script>
+
+    <script>
+        const data = [{
+            label: 'Internet',
+            links: [{
+                label: 'How does the internet work?',
+                url: 'https://cs.fyi/guide/how-does-internet-work'
+            }, {
+                label: 'What is HTTP?',
+                url: 'https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/'
+            }, {
+                label: 'What is hosting?',
+                url: 'https://www.youtube.com/watch?v=htbY9-yggB0'
+            }, ]
+        }, {
+            label: 'HTML',
+            links: [{
+                label: 'Learn the basics',
+                url: 'https://www.w3schools.com/html/html_intro.asp'
+            }, {
+                label: 'Writing Semantic Html',
+                url: 'https://www.w3schools.com/html/html5_semantic_elements.asp'
+            }, {
+                label: 'Forms and Validations',
+                url: 'https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation'
+            }, {
+                label: 'Conventions and Best Practices',
+                url: 'https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation'
+            }, {
+                label: 'Accesibilitiy',
+                url: 'https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation'
+            }, {
+                label: 'SEO Basics',
+                url: 'https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation'
+            }]
+        }, {
+            label: 'CSS',
+            links: [{
+                label: 'Learn the basics',
+                url: 'https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation'
+            }, {
+                label: 'Making Layouts',
+                url: 'https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation'
+            }, {
+                label: 'Responsive design and media queries',
+                url: 'https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation'
+            }]
+
+        }, {
+            label: 'JavaScript',
+            links: [{
+                label: 'Syntax and Basic Constructs',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Learn DOM Manipulation',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Learn Fetch API/ AJAX(XHR)',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'ES6+ and modular JavaScript',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Understand the concepts Hoisting, Event Bubbling,Scope,Prototype,Shadow DOM,strict',
+                url: 'https://www.w3schools.com/js/'
+            }]
+        }, {
+            label: 'Version Control Systems',
+            links: [{
+                label: 'Syntax and Basic Constructs',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Learn DOM Manipulation',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Learn Fetch API/ AJAX(XHR)',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'ES6+ and modular JavaScript',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Understand the concepts Hoisting, Event Bubbling,Scope,Prototype,Shadow DOM,strict',
+                url: 'https://www.w3schools.com/js/'
+            }]
+        }, {
+            label: 'Web Security Knowledge',
+            links: [{
+                label: 'Syntax and Basic Constructs',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Learn DOM Manipulation',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Learn Fetch API/ AJAX(XHR)',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'ES6+ and modular JavaScript',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Understand the concepts Hoisting, Event Bubbling,Scope,Prototype,Shadow DOM,strict',
+                url: 'https://www.w3schools.com/js/'
+            }]
+        }, {
+            label: 'Package Managers',
+            links: [{
+                label: 'Syntax and Basic Constructs',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Learn DOM Manipulation',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Learn Fetch API/ AJAX(XHR)',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'ES6+ and modular JavaScript',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Understand the concepts Hoisting, Event Bubbling,Scope,Prototype,Shadow DOM,strict',
+                url: 'https://www.w3schools.com/js/'
+            }]
+        }, {
+            label: 'CSS Architecture',
+            links: [{
+                label: 'Syntax and Basic Constructs',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Learn DOM Manipulation',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Learn Fetch API/ AJAX(XHR)',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'ES6+ and modular JavaScript',
+                url: 'https://www.w3schools.com/js/'
+            }, {
+                label: 'Understand the concepts Hoisting, Event Bubbling,Scope,Prototype,Shadow DOM,strict',
+                url: 'https://www.w3schools.com/js/'
+            }]
+        }];
+    </script>
+    <!-- dropdown -->
+    <script src="../dropdown.js"></script>
+</body>
+
+</html>

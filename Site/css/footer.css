@@ -1,0 +1,26 @@
+h4 {
+    color: #fff!important;
+}
+
+footer ul {
+    padding: 0!important;
+}
+
+footer ul li a {
+    color: #fff!important;
+}
+
+footer {
+    background-color: #0a101d!important;
+}
+
+.footer-text {
+    color: #bcbcbc!important;
+    font: 0.8rem Arial!important
+}
+
+.copyright {
+    font: 0.8rem Arial!important;
+    color: #fff!important;
+    padding-top: 15px!important;
+}
