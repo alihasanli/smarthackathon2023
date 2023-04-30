@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class EduText extends StatelessWidget {
@@ -19,7 +20,7 @@ class EduText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       data,
-      style: TextStyle(fontSize: size, color: color, fontWeight: font),
+      style: GoogleFonts.roboto(fontSize: size, color: color, fontWeight: font),
     );
   }
 }

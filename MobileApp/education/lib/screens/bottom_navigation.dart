@@ -41,8 +41,8 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
                 text: 'Courses',
               ),
               GButton(
-                icon: Icons.chat,
-                text: 'Community',
+                icon: Icons.article,
+                text: 'Article',
               ),
               GButton(
                 icon: Icons.person,

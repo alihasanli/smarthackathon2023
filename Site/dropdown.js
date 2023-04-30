@@ -1,12 +1,12 @@
 const dropdownsContainer = document.getElementById('dropdowns-container');
-
-// Create a dropdown menu for each item in the data array
+let x = 1
+    // Create a dropdown menu for each item in the data array
 data.forEach((dropdown) => {
     // Create the dropdown button element
     const button = document.createElement('button');
-    button.textContent = dropdown.label;
+    button.textContent = x + '. ' + dropdown.label;
     button.classList.add('dropbtn');
-
+    x++
     // Create the dropdown content element
     const dropdownContent = document.createElement('div');
     dropdownContent.classList.add('dropdown-content');

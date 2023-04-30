@@ -8,5 +8,13 @@ class Images {
     'https://img.freepik.com/free-vector/man-reading-illustration_114360-8535.jpg?w=2000',
     'https://static.vecteezy.com/system/resources/previews/002/462/291/original/man-reading-book-character-illustration-free-vector.jpg',
   ];
+  static List<String> lessons = [
+    "Pronouns",
+    "Nouns",
+    "Adjectives",
+    "Equations",
+    "Trigonometry",
+    "Differential Equation",
+  ];
   int count = images.length;
 }

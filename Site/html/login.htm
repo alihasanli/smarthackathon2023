@@ -8,12 +8,18 @@
     <script src="https://kit.fontawesome.com/4c296c037c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/login.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
-    <section class="container forms">
+    <section class="container forms" id="section">
         <div class="form login">
-            <div class="form-content">
+            <canvas style="display: block;position: absolute; top:0" id="canvas"></canvas>
+            <div class="form-content" style="position: relative; top:0">
                 <header>Login</header>
 
                 <div class="field input-field">
@@ -41,10 +47,10 @@
                 </div>
             </div>
 
-            <div class="line"></div>
+            <div class="line" style="position: relative; top:0"></div>
 
 
-            <div class="media-options">
+            <div class="media-options" style="position: relative; top:0">
                 <a href="#" class="field google">
                     <img src="../img/google.png" alt="google" class="google-img">
                     <span>Login with Google</span>
@@ -98,7 +104,62 @@
         </div>
     </section>
 
+    <script>
+        // create canvas
+        const canvas = document.getElementById('canvas');
+        const section = document.getElementById('section')
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
+        // create particles
+        const particles = [];
+        for (let i = 0; i < 100; i++) {
+            particles.push(new Particle());
+        }
+
+        // Particle class
+        function Particle() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = Math.random() * 2 - 1;
+            this.vy = Math.random() * 2 - 1;
+            this.radius = Math.random() * 2 + 1;
+            this.color = 'white';
+        }
+
+        // update particles
+        Particle.prototype.update = function() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > canvas.width) {
+                this.vx = -this.vx;
+            }
+            if (this.y < 0 || this.y > canvas.height) {
+                this.vy = -this.vy;
+            }
+        };
+
+        // draw particles
+        Particle.prototype.draw = function() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+        };
+
+        // animate particles
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+        }
+
+        animate();
+    </script>
 
 
     <script>

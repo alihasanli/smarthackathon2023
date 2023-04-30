@@ -1,5 +1,3 @@
-import 'package:education/screens/bottom_navigation.dart';
-import 'package:education/screens/home_screen.dart';
 import 'package:education/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: BottomNavScreen(),
+      home: LogInScreen(),
     );
   }
 }

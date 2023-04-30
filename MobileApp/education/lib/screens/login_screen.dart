@@ -1,4 +1,5 @@
 import 'package:colours/colours.dart';
+import 'package:education/screens/bottom_navigation.dart';
 import 'package:education/widgets/button.dart';
 import 'package:education/widgets/text.dart';
 import 'package:education/widgets/textfield.dart';
@@ -78,7 +79,22 @@ class _LogInScreenState extends State<LogInScreen> {
                         textLabel: 'Password',
                       ),
                       const SizedBox(height: 50),
-                      EduButton(text: 'Login'),
+                      MaterialButton(
+                        color: Colors.black,
+                        minWidth: 300,
+                        height: 60,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(24)),
+                        onPressed: () => Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                                builder: (context) => const BottomNavScreen())),
+                        child: EduText(
+                          data: 'Login',
+                          color: Colors.white,
+                          size: 22,
+                          font: FontWeight.w500,
+                        ),
+                      )
                     ],
                   ),
                 ),

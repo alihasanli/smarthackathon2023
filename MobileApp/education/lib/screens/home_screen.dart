@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../widgets/drawer.dart';
+import '../widgets/lesson.dart';
 import '../widgets/text.dart';
 import '../widgets/textfield.dart';
 
@@ -126,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     width: MediaQuery.of(context).size.width,
                     child: TabBarView(
                         controller: tabController,
-                        children: [courseContainer(), bookContainer()]),
+                        children: [courseContainer(), EduGuide()]),
                   )
                 ],
               ),
