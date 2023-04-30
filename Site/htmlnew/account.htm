@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://kit.fontawesome.com/4c296c037c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Spark</title>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div>
+                <h2 class="logo"><a class="text-white" href="indexnew.htm">Spark</a></h2>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="indexnew.htm">Home</a></li>
+                    <li><a href="guidenew.htm">Guides</a></li>
+                    <li><a href="videonew.htm">Videos</a></li>
+                    <li><a href="eventnew.htm">Events</a></li>
+                    <li><a class="active" href="account.htm">Account</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="vh-50 ">
+            <div class="container py-5">
+                <div class="bg-light p-3 rounded-5 ">
+                    <div id="user" class="d-flex  align-items-center justify-content-between  py-2 ">
+                        <div class="d-flex align-items-center">
+                            <span><i style="width:50px;height: 50px; font-size: 20px;" class="fa-solid fa-user bg-secondary rounded-circle p-3"></i></span>
+                            <h2 class="mx-3 text-dark">Ali Hasanli</h2>
+                        </div>
+                        <div>
+                            <p>I Group Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light p-3 rounded-5 my-4">
+                    <div class="d-flex align-items-center py-2">
+                        <span><i style="width:50px;height: 50px; font-size: 20px;" class="fa-solid fa-book bg-secondary rounded-circle p-3"></i></span>
+                        <h2 class="mx-3 text-dark">Your Courses</h2>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <th>Course Name</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>English</td>
+                                <td>Completed</td>
+                                <td>29.04.23</td>
+                            </tr>
+                            <tr>
+                                <td>Chemistry</td>
+                                <td> 60% Completed</td>
+                                <td>29.04.23</td>
+                            </tr>
+                            <tr>
+                                <td>Math</td>
+                                <td> 10% Completed</td>
+                                <td>25.04.23</td>
+                            </tr>
+                            <tr>
+                                <td>History</td>
+                                <td> 23% Completed</td>
+                                <td>25.04.23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-light rounded-5 p-3">
+                    <div class="d-flex align-items-center py-2">
+                        <span><i style="width:50px;height: 50px; font-size: 20px;" class="fa-solid fa-list-check bg-secondary rounded-circle p-3"></i></span>
+                        <h2 class="mx-3 text-dark">Your Progress</h2>
+                    </div>
+                    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-md-4">
+                    <h4 class="logo">Spark</h4>
+                    <p class="footer-text">Community created roadmaps, articles, resources and journeys to help you choose your path and grow in your career.</p>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h4>Map</h4>
+                    <ul>
+                        <li><a href="index.htm">Home</a></li>
+                        <li><a href="guide.htm">Guides</a></li>
+                        <li><a href="video.htm">Videos</a></li>
+                        <li><a href="event.htm">Events</a></li>
+                        <li><a href="account.htm">Account</a></li>
+
+
+                    </ul>
+                </div>
+                <p class="text-center copyright">&copy; 2023 Spark. All rights are reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var xyValues = [{
+            x: 50,
+            y: 7
+        }, {
+            x: 60,
+            y: 8
+        }, {
+            x: 70,
+            y: 8
+        }, {
+            x: 80,
+            y: 9
+        }, {
+            x: 90,
+            y: 9
+        }, {
+            x: 100,
+            y: 9
+        }, {
+            x: 110,
+            y: 10
+        }, {
+            x: 120,
+            y: 11
+        }, {
+            x: 130,
+            y: 14
+        }, {
+            x: 140,
+            y: 14
+        }, {
+            x: 150,
+            y: 15
+        }];
+
+        new Chart("myChart", {
+            type: "scatter",
+            data: {
+                datasets: [{
+                    pointRadius: 4,
+                    pointBackgroundColor: "rgb(0,0,255)",
+                    data: xyValues
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            min: 40,
+                            max: 160
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            min: 6,
+                            max: 16
+                        }
+                    }],
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -17,15 +17,15 @@
     <header>
         <nav class="container">
             <div>
-                <h2 class="logo"><a class="text-white" href="index.htm">Spark</a></h2>
+                <h2 class="logo"><a class="text-white" href="indexnew.htm">Spark</a></h2>
             </div>
             <div>
                 <ul>
-                    <li><a class="active" href="index.htm">Home</a></li>
-                    <li><a href="guide.htm">Guides</a></li>
-                    <li><a href="video.htm">Videos</a></li>
-                    <li><a href="event.htm">Events</a></li>
-                    <li><a href="login.htm">Account</a></li>
+                    <li><a href="indexnew.htm">Home</a></li>
+                    <li><a href="guidenew.htm">Guides</a></li>
+                    <li><a href="videonew.htm">Videos</a></li>
+                    <li><a href="eventnew.htm">Events</a></li>
+                    <li><a href="account.htm">Account</a></li>
                 </ul>
             </div>
         </nav>
@@ -35,40 +35,19 @@
             <div class="container">
                 <div class="row pt-4">
                     <div class="col-md-8 m-auto container">
-                        <h1 class="text-center">Roadmaps</h1>
+                        <h1 class="text-center">IV- Fourth Group Professions</h1>
                         <p class="text-center pb-5">Spark is a community effort to create roadmaps, guides and other educational content to help guide the developers in picking up the path and guide their learnings.</p>
                     </div>
                 </div>
             </div>
             <hr />
         </section>
-        <section class="section-2">
-            <div class="container">
-                <h2 class="text-center pt-5">Group based Roadmaps</h2>
-                <div class="pb-5 pt-3 group">
-                    <a href="first.htm">I - first group</a>
-                    <a href="second.htm">II - second group</a>
-                    <a href="third.htm">III - third group</a>
-                    <a href="fourth.htm">IV - fourth group</a>
-                    <a href="">V - fifth group</a>
-                </div>
-            </div>
-            <hr />
+        <section id="search" class="d-flex justify-content-center">
+            <input type="text" class="form-control w-50" placeholder="Search a profession" oninput="search()" id="searchBtn">
         </section>
-        <section class="section-3">
+        <section class="section-3 vh-50">
             <div class="container">
-                <h2 class="text-center pt-5">Role based Roadmaps</h2>
-                <div class="pb-5 pt-3 group">
-                    <a href="frontend.htm">Frontend</a>
-                    <a href="android.htm">Android</a>
-                    <a href="">UI/UX Design</a>
-                    <a href="">DevOps</a>
-                    <a href="">Chemical Engineering</a>
-                    <a href="">Math Teacher</a>
-                    <a href="">Architect</a>
-                    <a href="">Fullstack</a>
-                    <a href="">Ai Developer</a>
-                </div>
+                <div id="search-results" class="pb-5 pt-3 group"></div>
             </div>
         </section>
     </main>
@@ -83,16 +62,35 @@
                 <div class="col-md-4">
                     <h4>Map</h4>
                     <ul>
-                        <li><a href="index.htm">Home</a></li>
-                        <li><a href="guide.htm">Guides</a></li>
-                        <li><a href="video.htm">Videos</a></li>
-                        <li><a href="event.htm">Events</a></li>
+                        <li><a href="indexnew.htm">Home</a></li>
+                        <li><a href="guidenew.htm">Guides</a></li>
+                        <li><a href="videonew.htm">Videos</a></li>
+                        <li><a href="eventnew.htm">Events</a></li>
                     </ul>
                 </div>
                 <p class="text-center copyright">&copy; 2023 Spark. All rights are reserved</p>
             </div>
         </div>
     </footer>
+    <script>
+        window.addEventListener('load', (event) => {
+            search()
+        });
+
+        function search() {
+            let searchQuery = document.getElementById("searchBtn").value.toLowerCase();
+            let data = [" Teaching Biology ", 'Teaching Chemistry', "Psychology", "Biology ", "Biotechnology", "Ecology", "Chemistry", "Plant protection ", " Pharmacy", " Nursing ", "Medicine"];
+            let matchingItems = "";
+
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].toLowerCase().indexOf(searchQuery.toLowerCase()) > -1) {
+                    matchingItems += '<a href="#" >' + data[i] + '</a>';
+                }
+            }
+
+            document.getElementById("search-results").innerHTML = matchingItems;
+        };
+    </script>
 </body>
 
 </html>

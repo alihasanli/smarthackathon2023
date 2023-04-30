@@ -17,7 +17,7 @@ class CourseScreen extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: double.infinity, //MediaQuery.of(context).size.width,
-                    height: 300,
+                    height: 350,
                     child: Image.network(imageUrl, fit: BoxFit.fill),
                   ),
                   Padding(
@@ -34,18 +34,14 @@ class CourseScreen extends StatelessWidget {
                         const Icon(Icons.more_vert, size: 30)
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
               Container(
-                height: MediaQuery.of(context).size.height - 200,
+                height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
                 decoration: const BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
-                  ),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
@@ -57,7 +53,7 @@ class CourseScreen extends StatelessWidget {
                         width: double.infinity,
                         height: 450,
                         child: ListView.builder(
-                          itemCount: 5,
+                          itemCount: 6,
                           itemBuilder: (context, index) {
                             return ListTile(
                               title: EduText(data: '5:35 mins'),

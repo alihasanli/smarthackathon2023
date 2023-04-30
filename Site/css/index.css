@@ -11,7 +11,15 @@
     font-family: Audiowide;
 }
 
-ul li a:hover {
+.vh-50 {
+    min-height: 50vh;
+}
+
+ul li a.active {
+    color: #b652f0!important;
+}
+
+li a:hover {
     color: #b652f0!important;
     transition: .5s;
 }

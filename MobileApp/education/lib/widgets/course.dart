@@ -24,7 +24,7 @@ class EduCourse extends StatelessWidget {
             ),
             Positioned(
               top: 20,
-              left: 30,
+              left: 20,
               child: EduText(
                 data: 'data',
                 size: 20,

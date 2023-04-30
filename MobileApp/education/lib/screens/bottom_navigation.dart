@@ -13,15 +13,14 @@ class BottomNavScreen extends StatefulWidget {
 
 class _BottomNavScreenState extends State<BottomNavScreen> {
   int index = 0;
-  List<Widget> pages = const [HomeScreen(), ProfileScreen(), ChatScreen()];
+  List<Widget> pages = [HomeScreen(), ChatScreen(), ProfileScreen()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(24), topRight: Radius.circular(24))),
+        margin: const EdgeInsets.only(bottom: 6, left: 4, right: 4),
+        decoration: BoxDecoration(
+            color: Colors.black, borderRadius: BorderRadius.circular(32)),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GNav(
@@ -34,7 +33,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
             color: Colors.white,
             activeColor: Colors.white,
             tabBackgroundColor: Colors.grey.shade800,
-            gap: 12,
+            gap: 14,
             iconSize: 24,
             tabs: const [
               GButton(
@@ -43,7 +42,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
               ),
               GButton(
                 icon: Icons.chat,
-                text: 'Chat',
+                text: 'Community',
               ),
               GButton(
                 icon: Icons.person,

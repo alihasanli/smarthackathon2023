@@ -1,4 +1,5 @@
 import 'package:colours/colours.dart';
+import 'package:education/widgets/button.dart';
 import 'package:education/widgets/text.dart';
 import 'package:education/widgets/textfield.dart';
 import 'package:flutter/material.dart';
@@ -77,20 +78,7 @@ class _LogInScreenState extends State<LogInScreen> {
                         textLabel: 'Password',
                       ),
                       const SizedBox(height: 50),
-                      MaterialButton(
-                        color: Colors.black,
-                        minWidth: 300,
-                        height: 50,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(24)),
-                        onPressed: () {},
-                        child: EduText(
-                          data: 'Login',
-                          color: Colors.white,
-                          size: 22,
-                          font: FontWeight.w400,
-                        ),
-                      ),
+                      EduButton(text: 'Login'),
                     ],
                   ),
                 ),
